@@ -1,0 +1,13 @@
+/*API - RULES*/
+ Return strct:
+
+ {
+     "status":{
+         // 0 - success
+         "code" : 0,
+         "text": "Error password"
+     }
+     "data":{
+         ...
+     }
+ }

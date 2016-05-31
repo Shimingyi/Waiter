@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/framwork/jquery/jquery-1.12.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form id='tForm'>
+        <p>url<input type="text" name='url'></p><br />
+        <p>title<input type="text" name='title'></p><br />
+        <p>content<input type="text" name='content'></p><br />
+        <input id='abutton' type="button" value="提 交" />
+    </form>
+    <script>
+        $('#abutton').click(function(){
+            $.ajax({
+                type: 'get',
+                contentType: 'application/json',
+                url: '127.0.0.1:3000/save',
+                data: $('#tFrom').serialize(),
+                success: function(data){
+                    alert(data);
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
